@@ -1,6 +1,14 @@
 # Dotfiles
 
-## 管理項目
+## Vim 系
 
-- vim -> .vimrc
-- tmux -> .tmux.conf
+### vim
+- .vimrc
+
+### dein.vim
+- dein.toml
+- dein\_lazy.toml
+
+## tmux 系
+- .tmux.conf
+
