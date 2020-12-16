@@ -17,7 +17,7 @@ if dein#load_state(s:dein_dir)
 endif
 
 filetype plugin indent on
-syntax enable
+syntax on  " enable
 
 if dein#check_install()
   call dein#install()
@@ -27,7 +27,7 @@ endif
 set t_Co=256
 colorscheme molokai
 
-"vim-fugitive
+" vim-fugitive
 nnoremap <leader>ga :Git add %:p<CR><CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit<CR><CR>
@@ -40,7 +40,7 @@ nnoremap <leader>gs :Gstatus<CR>
 set number  " print line number
 set title  " print filename
 set showmatch  " print {}
-syntax on  " color code
+" syntax on  " color code
 set expandtab  " change tab -> space(4)
 set tabstop=4  " indent space -> 4
 set shiftwidth=4  " >> ot << space -> 4
@@ -56,12 +56,13 @@ set autoindent  " auto indent
 set showcmd
 set background=dark
 set ruler
-set statusline=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ %=[CODE=0x%02B]\ [POS=%l/%L(%02v)]   
+set statusline=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ %=[CODE=0x%02B]\ [POS=%l/%L(%02v)]\ %{fugitive#statusline()}
 set nrformats=  " 8 shinsuu -> 10 shinsuu
 set history=200
-set nocompatible
 set hidden
-set clipboard=unnamedplus
+" set clipboard=unnamedplus  " Ubuntu
+set clipboard+=unnamed  " Mac
+" set nocompatible
 
 set cursorline
 highlight Cursorline cterm=NONE ctermfg=NONE ctermbg=black
