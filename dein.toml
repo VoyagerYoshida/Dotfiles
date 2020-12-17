@@ -9,3 +9,7 @@ repo = 'tpope/vim-commentary'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+

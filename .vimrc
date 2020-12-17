@@ -37,6 +37,10 @@ nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gs :Gstatus<CR>
 
+" for lambdalisue/fern.vim
+nnoremap <leader>fr :Fern . -reveal=%<CR><CR>
+nnoremap <leader>fd :Fern . -reveal=% -drawer<CR><CR>
+
 set number  " print line number
 set title  " print filename
 set showmatch  " print {}
