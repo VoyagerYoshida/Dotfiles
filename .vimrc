@@ -1,7 +1,50 @@
+if &compatible
+  set nocompatible
+endif
+
+let s:dein_dir = expand('~/.cache/dein')
+let g:rc_dir = expand('~/.vim/rc')
+execute 'set runtimepath^=' . fnamemodify(s:dein_dir . "/repos/github.com/Shougo/dein.vim", ':p')
+
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+
+  call dein#load_toml(g:rc_dir . "/dein.toml", {'lazy': 0})
+  call dein#load_toml(g:rc_dir . "/dein_lazy.toml", {'lazy': 1})
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax on  " enable
+
+if dein#check_install()
+  call dein#install()
+endif
+
+" for tomasr/molokai
+set t_Co=256
+colorscheme molokai
+
+" vim-fugitive
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gc :Gcommit<CR><CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gs :Gstatus<CR>
+
+" for lambdalisue/fern.vim
+nnoremap <leader>fr :Fern . -reveal=%<CR><CR>
+nnoremap <leader>fd :Fern . -reveal=% -drawer<CR><CR>
+
 set number  " print line number
 set title  " print filename
 set showmatch  " print {}
-syntax on  " color code
+" syntax on  " color code
 set expandtab  " change tab -> space(4)
 set tabstop=4  " indent space -> 4
 set shiftwidth=4  " >> ot << space -> 4
@@ -17,12 +60,13 @@ set autoindent  " auto indent
 set showcmd
 set background=dark
 set ruler
-set statusline=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ %=[CODE=0x%02B]\ [POS=%l/%L(%02v)]   
+set statusline=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ %=[CODE=0x%02B]\ [POS=%l/%L(%02v)]\ %{fugitive#statusline()}
 set nrformats=  " 8 shinsuu -> 10 shinsuu
 set history=200
-set nocompatible
 set hidden
-set clipboard=unnamedplus
+" set clipboard=unnamedplus  " Ubuntu
+set clipboard+=unnamed  " Mac
+" set nocompatible
 
 set cursorline
 highlight Cursorline cterm=NONE ctermfg=NONE ctermbg=black

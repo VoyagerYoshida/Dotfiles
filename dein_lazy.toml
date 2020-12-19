@@ -1,0 +1,3 @@
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+on_ft = ['kotlin']
