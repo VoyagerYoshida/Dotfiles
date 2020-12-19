@@ -41,6 +41,10 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>fr :Fern . -reveal=%<CR><CR>
 nnoremap <leader>fd :Fern . -reveal=% -drawer<CR><CR>
 
+" for junegunn/fzf.vim
+nnoremap <silent> fzf :Files<CR>
+nnoremap <silent> ls :Buffers<CR>
+
 set number  " print line number
 set title  " print filename
 set showmatch  " print {}

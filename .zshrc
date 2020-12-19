@@ -57,3 +57,5 @@ export PATH="$PATH:/Users/wataru/Developer/flutter/bin"
 
 
 clear
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
