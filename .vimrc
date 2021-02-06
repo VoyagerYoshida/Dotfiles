@@ -42,8 +42,8 @@ nnoremap <leader>fr :Fern . -reveal=%<CR><CR>
 nnoremap <leader>fd :Fern . -reveal=% -drawer<CR><CR>
 
 " for junegunn/fzf.vim
-nnoremap <silent> fzf :Files<CR>
-nnoremap <silent> ls :Buffers<CR>
+nnoremap <leader>fz :Files<CR>
+nnoremap <leader>fb :Buffers<CR>
 
 set number  " print line number
 set title  " print filename
@@ -78,7 +78,7 @@ set cursorcolumn
 highlight Cursorcolumn cterm=NONE ctermfg=NONE ctermbg=black
 
 nnoremap <Leader>c :<C-u>setlocal cursorline! cursorcolumn!<CR>
-hi CursorLineNr term=bold cterm=NONE ctermfg=255 ctermbg=NONE
+hi CursorLineNr term=bold cterm=NONE ctermfg=Red ctermbg=NONE
 
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
