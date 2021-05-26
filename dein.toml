@@ -14,6 +14,16 @@ repo = 'tpope/vim-fugitive'
 repo = 'lambdalisue/fern.vim'
 
 [[plugins]]
+repo = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
 merged = '0'
@@ -25,3 +35,7 @@ depends = 'fzf'
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 merged = '0'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+on_i = 1

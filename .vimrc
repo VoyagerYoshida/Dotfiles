@@ -27,6 +27,10 @@ endif
 set t_Co=256
 colorscheme molokai
 
+" for vim-airline/vim-airline & vim-airline_theme
+let g:airline_theme = 'molokai'
+let g:airline#extensions#tabline#enabled = 1
+
 " vim-fugitive
 nnoremap <leader>ga :Git add %:p<CR><CR>
 nnoremap <leader>gb :Gblame<CR>
@@ -44,6 +48,11 @@ nnoremap <leader>fd :Fern . -reveal=% -drawer<CR><CR>
 " for junegunn/fzf.vim
 nnoremap <leader>fz :Files<CR>
 nnoremap <leader>fb :Buffers<CR>
+
+" for neoclide/coc.nvim
+nmap <leader>ch :<C-u>call CocAction('doHover')<CR>
+nmap <leader>cd <Plug>(coc-definition)
+nmap <leader>cr <Plug>(coc-references)
 
 set number  " print line number
 set title  " print filename
@@ -64,7 +73,7 @@ set autoindent  " auto indent
 set showcmd
 set background=dark
 set ruler
-set statusline=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ %=[CODE=0x%02B]\ [POS=%l/%L(%02v)]\ %{fugitive#statusline()}
+" set statusline=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ %=[CODE=0x%02B]\ [POS=%l/%L(%02v)]\ %{fugitive#statusline()}
 set nrformats=  " 8 shinsuu -> 10 shinsuu
 set history=200
 set hidden
