@@ -25,10 +25,13 @@ endif
 
 " for tomasr/molokai
 set t_Co=256
-colorscheme molokai
+" colorscheme molokai
+colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night-Eighties
 
 " for vim-airline/vim-airline & vim-airline_theme
-let g:airline_theme = 'molokai'
+" let g:airline_theme = 'molokai'
+let g:airline_theme = 'tomorrow'
 let g:airline#extensions#tabline#enabled = 1
 
 " vim-fugitive
@@ -82,11 +85,11 @@ set clipboard+=unnamed  " Mac
 " set nocompatible
 
 set cursorline
-highlight Cursorline cterm=NONE ctermfg=NONE ctermbg=black
+" highlight Cursorline cterm=NONE ctermfg=NONE ctermbg=black
 set cursorcolumn
-highlight Cursorcolumn cterm=NONE ctermfg=NONE ctermbg=black
+" highlight Cursorcolumn cterm=NONE ctermfg=NONE ctermbg=black
 
-nnoremap <Leader>c :<C-u>setlocal cursorline! cursorcolumn!<CR>
+nnoremap <Leader>cl :<C-u>setlocal cursorline! cursorcolumn!<CR>
 hi CursorLineNr term=bold cterm=NONE ctermfg=Red ctermbg=NONE
 
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
