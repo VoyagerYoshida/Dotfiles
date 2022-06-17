@@ -8,6 +8,15 @@ repo = 'tomasr/molokai'
 repo = 'chriskempson/vim-tomorrow-theme'
 
 [[plugins]]
+repo = 'donearm/ubaryd'
+
+[[plugins]]
+repo = 'AlessandroYorba/Alduin'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
 repo = 'tpope/vim-commentary'
 
 [[plugins]]

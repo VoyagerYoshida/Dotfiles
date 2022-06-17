@@ -26,12 +26,17 @@ endif
 " for tomasr/molokai
 set t_Co=256
 " colorscheme molokai
-colorscheme Tomorrow-Night
-" colorscheme Tomorrow-Night-Eighties
+" colorscheme Tomorrow-Night
+" colorscheme ubaryd
+" colorscheme alduin
+colorscheme iceberg
 
 " for vim-airline/vim-airline & vim-airline_theme
 " let g:airline_theme = 'molokai'
-let g:airline_theme = 'tomorrow'
+" let g:airline_theme = 'tomorrow'
+" let g:airline_theme = 'ubaryd'
+" let g:airline_theme = 'alduin'
+let g:airline_theme = 'iceberg'
 let g:airline#extensions#tabline#enabled = 1
 
 " vim-fugitive
